@@ -1,0 +1,2 @@
+class Sparrow < Bird
+end

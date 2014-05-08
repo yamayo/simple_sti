@@ -1,0 +1,2 @@
+class Eagle < Bird
+end
