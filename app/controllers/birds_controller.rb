@@ -8,7 +8,7 @@ class BirdsController < ApplicationController
   def create
     bird = bird_class.new(bird_params)
     if bird.save
-      head :created
+      render json: bird, status: :created
     else
       render json: bird.errors.full_messages, status: :unprocessable_entity
     end
