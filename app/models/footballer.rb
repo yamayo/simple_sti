@@ -1,0 +1,2 @@
+class Footballer < Player
+end

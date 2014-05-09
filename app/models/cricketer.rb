@@ -1,0 +1,2 @@
+class Cricketer < Player
+end

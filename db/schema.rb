@@ -11,12 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140508052538) do
+ActiveRecord::Schema.define(version: 20140509082157) do
 
   create_table "birds", force: true do |t|
     t.string   "type"
     t.string   "name"
     t.integer  "age"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "players", force: true do |t|
+    t.string   "type"
+    t.string   "name"
+    t.string   "club"
+    t.decimal  "batting_average", precision: 4, scale: 3
     t.datetime "created_at"
     t.datetime "updated_at"
   end
