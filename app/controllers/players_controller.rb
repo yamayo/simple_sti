@@ -38,7 +38,7 @@ class PlayersController < ApplicationController
   end
 
   def player_params
-    params.require(:player).permit(:name, :club, :batting_average) #.merge(permit_param)
+    params.require(:player).permit(:name, :club, :batting_average)
   end
 
   def type
