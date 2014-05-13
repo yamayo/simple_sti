@@ -41,11 +41,7 @@ class PlayersController < ApplicationController
     params.require(:player).permit(:name, :club, :batting_average)
   end
 
-  def type
-    params[:type] || 'Player'
-  end
-
   def player_class
-    type.constantize
+    params[:type].constantize
   end
 end

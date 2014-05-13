@@ -1,11 +1,11 @@
 class Player < ActiveRecord::Base
   class << self
     def find_sti_class(type_name)
-      type_name.classify.constantize
+      type_name.camelize.constantize
     end
 
     def sti_name
-      name.downcase
+      name.underscore
     end
   end
 end
