@@ -37,11 +37,15 @@ class PlayersController < ApplicationController
     @player = player_class.find(params[:id])
   end
 
+  def type
+    params[:type]
+  end
+
   def player_params
-    params.require(:player).permit(:name, :club, :batting_average)
+    params.require(type.underscore.to_sym).permit(:name, :club, :batting_average)
   end
 
   def player_class
-    params[:type].constantize
+    type.constantize
   end
 end
